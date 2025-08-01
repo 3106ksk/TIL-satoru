@@ -1,0 +1,107 @@
+## 「undefined が返される」を解決！React での配列・オブジェクト混在データの扱い方
+
+React + TypeScript + Material-UIでワークアウト履歴機能を実装中、`workoutConfig.exercises[exerciseName]`でundefinedエラーが発生。原因は配列とオブジェクトのデータ構造を混同していたこと。適切なアクセス方法で解決。
+
+## 背景と課題
+React + TypeScript + Material-UIを使用してワークアウト履歴テーブルを実装していました。このテーブルは、ユーザーが設定した運動種目に基づいて詳細な回数を動的に表示する機能です。Material-UIはGoogleのMaterial Designを実装したReactコンポーネントライブラリで、統一感のあるUIを素早く構築できます。
+
+実装中に運動データにアクセスする際、`const exercise = workoutConfig.exercises[exerciseName]`で常にundefinedが返される問題が発生しました。一見正常に見えるコードでしたが、実際にはデータ構造の理解不足が原因でした。
+
+## 事象の再現手順
+問題が発生していたコードは以下の通りです：
+
+```js
+// 間違った実装
+const exercise = workoutConfig.exercises[exerciseName];
+console.log(exercise); // undefined
+
+// データ構造の前提
+// workoutConfig.exercises (配列)
+const workoutConfig = {
+  exercises: [
+    "プッシュアップ",
+    "スクワット", 
+    "ウォーキング"
+  ]
+};
+
+// workout.exercises (オブジェクト)
+const workout = {
+  exercises: {
+    "プッシュアップ": { set1: 10, set2: 12 },
+    "スクワット": { set1: 15, set2: 15 }
+  }
+};
+```
+
+この実装では、配列であるworkoutConfig.exercisesに対してオブジェクトのキーアクセス方式を使用していたため、常にundefinedが返されていました。
+
+## 解決までの思考プロセス
+
+最初の仮説は漠然と「configにアクセスしているからundefined」でしたが、これでは具体性に欠けていました。
+問題を特定するため、データ構造の詳細確認を行いました。
+
+検証の結果、データ構造の違いがわかりました：
+- `workoutConfig.exercises`は運動名の配列
+- `workout.exercises`は運動データを格納するオブジェクト
+
+この構造の違いを理解することで、適切なアクセス方法が明確になりました。配列の要素（運動名）をオブジェクトのキーとして使用する必要があったのです。
+
+根本的な原因は、JavaScriptの配列とオブジェクトのアクセス方法の違いを正しく理解していなかったことでした。
+TypeScriptを使用していても、実行時のデータ構造の理解は重要です。
+
+## 最終的な解決策
+
+データ構造を理解した上で、適切なアクセス方法に修正しました：
+
+```js
+// ❌ 間違った実装
+const exercise = workoutConfig.exercises[exerciseName];
+
+// ✅ 正しい実装 
+const exercise = workout.exercises[exerciseName];
+
+// 正しいアクセスパターン
+workoutConfig.exercises.map(exerciseName => {
+  // 配列から運動名を取得
+  const exercise = workout.exercises[exerciseName]; 
+  // オブジェクトのキーとして使用
+  return exercise;
+});
+```
+
+解決のポイントは、データの役割を明確に分離することでした：
+
+**設定データと実行データの分離** - workoutConfig.exercisesは利用可能な運動種目のリスト（配列）、workout.exercisesは実際の運動記録（オブジェクト）として役割を分けました。
+
+**適切なアクセスパターン** - 配列から運動名を取得し、その名前をキーとしてオブジェクトから詳細データを取得する2段階のアクセス方法を採用しました。
+
+**TypeScript型定義の活用** - 今後同様の問題を防ぐため、インターface定義でデータ構造を明確化することも重要です。
+
+## 他プロジェクトでの応用可能性
+// 配列要素をオブジェクトキーとして使用
+// 運動種目設定（配列）
+const workoutTypes: string[] = ['cardio', 'strength', 'flexibility'];
+
+// 運動データ（オブジェクト）
+interface ExerciseData {
+  [key: string]: {
+    duration: number;
+    calories: number;
+    sets?: number[];
+  };
+}
+
+const exerciseData: ExerciseData = {
+  cardio: { duration: 30, calories: 300 },
+  strength: { duration: 45, calories: 250, sets: [10, 12, 8] },
+  flexibility: { duration: 15, calories: 50 }
+};
+
+// 動的表示
+workoutTypes.map(type => {
+  const data = exerciseData[type];
+  return <WorkoutSummary key={type} type={type} data={data} />;
+});
+
+//[]の中身をworkoutTypesの運動タイプテキストを利用することで独立している、運動データを持つExerciseDataオブジェクトを動的にUIへ表示することできる
