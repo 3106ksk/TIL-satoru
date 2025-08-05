@@ -1,4 +1,4 @@
-## TL;supertest で app.address is not a function が出た
+## supertest で app.address is not a function が出た
 
 supertest で Express アプリをテストする際、`TypeError: app.address is not a function`エラーが発生。原因は server インスタンスではなく app インスタンスをエクスポートすべきところを間違えていたこと。適切なオブジェクトのエクスポートと環境条件分岐で解決。
 
