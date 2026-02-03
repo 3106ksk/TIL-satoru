@@ -1,0 +1,19 @@
+﻿﻿Status,Daily Review,WeekKey,Date,duration (m),start time,end time,Notes,Phase,Technical Interview,Cognitive Headroom,Focus,Friction,Deep Score,Deep Flag,Deep Work Min,作成日時,In This Week,In Last Week,Interview Min,Prep Min,WrapUp Min,TI Min, learning content
+Done,,2026-W04,2026-01-20,41,"January 20, 2026 10:14 AM (GMT+9)","January 20, 2026 10:55 AM (GMT+9)","やった：カリキュラム環境構築、ブックマーク参照ドキュメントリサーチ指示
+詰まった/気づいた：",,,3,3,,4,Yes,41,"January 20, 2026 10:14 AM",Yes,No,0,0,0,0,
+Done,1/22 (https://www.notion.so/1-22-2efd5c5438fd80b78abae53aa05e51cb?pvs=21),2026-W04,2026-01-22,64,"January 22, 2026 8:12 AM (GMT+9)","January 22, 2026 9:16 AM (GMT+9)","やった：カリキュラム | ブックマーク
+詰まった/気づいた：始める前はサボっても良いかという気持ちがあったが、学習を始めると、ブックマークの実装ロジックについて調べて知ることが楽しいという感覚があった",,,4,4,2,4,Yes,64,"January 22, 2026 9:16 AM",Yes,No,0,0,0,0,
+Done,1/22 (https://www.notion.so/1-22-2efd5c5438fd80b78abae53aa05e51cb?pvs=21),2026-W04,2026-01-22,90,"January 22, 2026 9:33 AM (GMT+9)","January 22, 2026 11:03 AM (GMT+9)","やった：includes SQL理解
+詰まった/気づいた：実行されるsqlが何かをまずは学習。理解ができていなかったことに気づいた",,,4,4,5,3,No,0,"January 22, 2026 9:33 AM",Yes,No,0,0,0,0,
+Done,1/22 (https://www.notion.so/1-22-2efd5c5438fd80b78abae53aa05e51cb?pvs=21),2026-W04,2026-01-22,29,"January 22, 2026 11:19 AM (GMT+9)","January 22, 2026 11:48 AM (GMT+9)","やった：bookmarkの実装
+詰まった/気づいた：",,,3,3,3,3,No,0,"January 22, 2026 11:19 AM",Yes,No,0,0,0,0,
+Done,1/23 (https://www.notion.so/1-23-2f1d5c5438fd805da80bd3b8eb6db7ec?pvs=21),2026-W04,2026-01-23,39,"January 23, 2026 12:14 PM (GMT+9)","January 23, 2026 12:53 PM (GMT+9)","やった：イベント企画準備
+詰まった/気づいた：",,,3,3,3,3,No,0,"January 23, 2026 12:14 PM",Yes,No,0,0,0,0,
+Done,1/23 (https://www.notion.so/1-23-2f1d5c5438fd805da80bd3b8eb6db7ec?pvs=21),2026-W04,2026-01-23,48,"January 23, 2026 6:18 PM (GMT+9)","January 23, 2026 7:06 PM (GMT+9)","やった：イベント企画準備
+詰まった/気づいた：",,,3,3,3,3,No,0,"January 23, 2026 6:18 PM",Yes,No,0,0,0,0,
+Done,1/23 (https://www.notion.so/1-23-2f1d5c5438fd805da80bd3b8eb6db7ec?pvs=21),2026-W04,2026-01-23,47,"January 23, 2026 7:12 PM (GMT+9)","January 23, 2026 7:59 PM (GMT+9)","やった：ブックマーク実装
+詰まった/気づいた：何をすれば良いか見当がつかないのでフォーマットを使って現状の整理。ブックマークがまず表示されていないのでつまづいている",,,3,3,3,3,No,0,"January 23, 2026 7:12 PM",Yes,No,0,0,0,0,
+Done,1/23 (https://www.notion.so/1-23-2f1d5c5438fd805da80bd3b8eb6db7ec?pvs=21),2026-W04,2026-01-23,14,"January 23, 2026 8:15 PM (GMT+9)","January 23, 2026 8:29 PM (GMT+9)","やった：ブックマーク実装
+詰まった/気づいた：何をすれば良いか見当がつかないのでフォーマットを使って現状の整理。ブックマーク表示問題は解消→再度一覧表示の実装に戻るがタイムアップで終了",,,3,4,4,3,No,0,"January 23, 2026 8:15 PM",Yes,No,0,0,0,0,
+Done,1/24 (https://www.notion.so/1-24-2f2d5c5438fd80dca21fed71aec428d6?pvs=21),2026-W04,2026-01-24,39,"January 24, 2026 12:14 PM (GMT+9)","January 24, 2026 12:53 PM (GMT+9)","やった：ブックマークロジックについて学習
+詰まった/気づいた：AIを使って概念のリサーチ",,,4,4,4,3.3,No,0,"January 24, 2026 12:14 PM",Yes,No,0,0,0,0,
