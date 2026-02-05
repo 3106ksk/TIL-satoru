@@ -14,6 +14,7 @@ This skill takes a raw Notion markdown export of a daily log and reformats it ac
 3. The skill will:
    - Rename the file to `daily_YYYY-MM-DD.md`.
    - Clean up metadata and noise.
+   - **Auto-calculate** true work time by subtracting 'Rest' sessions (requires Sessions CSV).
    - Restructure the content into Stats, Context & Reflection, and Technical Learnings.
 
 ## References
@@ -26,6 +27,14 @@ This skill takes a raw Notion markdown export of a daily log and reformats it ac
    - Identify the Date from the content (property like `Date`/`Time`, or in the title). If missing, ask the user or infer from filename.
    - Identify values for: `Day Mode`, `Total Min`, `Deep Score`, `Top1`.
    - Identify sections for: `Worked`, `Slipped`, `Insight`.
+   - **Calculate Work Time**:
+     - Look for a "Sessions" CSV file in `notion_exports` (e.g., `Sessions*.csv`).
+     - If found:
+       - Filter rows where `Date` matches the Daily Review date.
+       - Identify "Rest" sessions (look for "Rest" in `Tag`, `Type`, or `Name` columns).
+       - Sum the duration of these "Rest" sessions.
+       - Subtract "Rest" duration from `Total Min`.
+       - use this **Calculated Total Min** for the output.
    - Identify Technical Learnings content (body text/headers).
       - **CRITICAL**: Watch for multiple occurrences of "Q:" or "Question:". Each "Q:" should be treated as a SEPARATE `### {Topic}` section in Technical Learnings. Do not merge them.
 
@@ -36,7 +45,7 @@ This skill takes a raw Notion markdown export of a daily log and reformats it ac
 
    ## Stats
    - **Day Mode**: {Value}
-   - **Total Min**: {Value} min
+   - **Total Min**: {Calculated Total Min} min (Excluding Rest)
    - **Deep Score**: {Value}
    - **Top1**: {Value}
 
