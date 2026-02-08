@@ -21,22 +21,25 @@ AI分析の品質を最大化するため、「情報の重複（ノイズ）」
 ```markdown
 # YYYY-MM-DD Daily Review
 
-## Stats
+■ Stats
 - **Day Mode**: Off (OFF) / Shift (ON)
 - **Total Min**: [数値] min
 - **Deep Score**: [数値]
 - **Top1**: [目標内容]
 
-## Context & Reflection
-### Worked
+■ Context & Reflection
+**Worked**
 - 事実: [内容] / 理由: [要因]
-### Slipped
+
+**Slipped**
 - 事実: [内容] / トリガー: [要因]
-### Insight
+
+**Insight**
 - 事実: [内容] / 次の一手: [教訓・行動]
 
-## Technical Learnings
-### [領域]: [具体的トピック/エラー名]
+■ Technical Learnings
+
+**1. [領域]: [具体的トピック/エラー名]**
 - **Issue**: [何が起きたか] (トラブルシューティング時)
 - **Question**: [疑問] (学習・理解時)
 - **Cause**: [原因] (任意)
@@ -57,6 +60,7 @@ AI分析の品質を最大化するため、「情報の重複（ノイズ）」
 - **Top1**: 1行1目標。文末の句点は不要。
 - **Reflection**: 事実/理由(トリガー)/次の一手のラベルを固定。
 - **Technical Learnings**: トピック見出しは `領域: 具体` 形式で統一。
+- **Research Stock**: 未解決の疑問は `### 📥 Research Stock` (または `### 未解決`) 以下に箇条書きにする。これらは自動的に `research_stock.md` に移動され、日報からは削除される。
 
 ## 6. クリーニングルール（Noise Reduction）
 Notionエクスポートに含まれる以下は必ず削除する。

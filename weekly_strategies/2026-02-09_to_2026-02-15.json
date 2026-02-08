@@ -1,0 +1,34 @@
+{
+  "weekly_strategy_context": {
+    "period": {
+      "start": "2026-02-09",
+      "end": "2026-02-15"
+    },
+    "theme": "パスワードリセット・管理者機能の実装（質重視・持続可能なペース）",
+    "schedule_profile": {
+      "mon": "Shift",
+      "tue": "Off (Study)",
+      "wed": "Complete Rest (No Study)",
+      "thu": "Off (Study)",
+      "fri": "Shift",
+      "sat": "Shift",
+      "sun": "Off (Study)"
+    },
+    "target_resources": {
+      "total_hours_goal": 24.0,
+      "calculation_basis": "Shift(2h*3) + StudyOff(6.0h*3) + Rest(0h) = 24.0h",
+      "focus_time": "午前中（08:00-12:00）の4時間に全リソースを投入"
+    },
+    "experiment": {
+      "action": "水曜完全オフ & 学習日14時以降の『守り』の徹底",
+      "hypothesis": "目標時間を6時間に抑え、午後を『流し』にすることで、翌日のDeep Scoreが向上し、結果的に週全体の生産性が上がるはずだ",
+      "success_definition": "Off日の学習時間が6時間を超えなくても『焦り』を感じず、逆に14時でスパッと切り上げられていること。"
+    },
+    "risks": [
+      "目標時間を下げたことによる『進捗不足』への不安（水曜にPCを開きたくなる誘惑）",
+      "木曜日の朝、休養明けで調子が良くても飛ばしすぎない自制心",
+      "週末（金・土）のShift連勤の疲労蓄積"
+    ],
+    "success_criteria": "Off日の学習時間が『6時間前後』で安定し、かつDeep Scoreの平均が『3.5以上』を維持できていること。"
+  }
+}

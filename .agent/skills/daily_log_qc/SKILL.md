@@ -15,8 +15,8 @@ Use this skill when the user asks to validate, lint, or improve a Daily Review f
 1. **Open the target file** and confirm it is a Daily Review.
 2. **Structure check**:
    - H1 title: `# YYYY-MM-DD Daily Review`
-   - H2 order: Stats → Context & Reflection → Technical Learnings
-   - H3 sections: Worked / Slipped / Insight
+   - Main sections: `■ Stats`, `■ Context & Reflection`, `■ Technical Learnings`
+   - Subsections: `**Worked**`, `**Slipped**`, `**Insight**`
 3. **Normalization check** (see Golden Rules for exact constraints):
    - Date format ISO, Day Mode allowed values (Off (OFF) / Shift (ON))
    - Total Min integer with `min`

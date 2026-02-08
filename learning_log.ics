@@ -1,0 +1,288 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Learning Log//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260202T133300
+DTEND:20260202T140700
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 2.0\nNotes: 週末分析のためにデータ正規化設計
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260202T184500
+DTEND:20260202T201400
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：分析レポート作成 詰まった/気づいた：今週はレポート作成のためのskills【自動化】で完了 今週の目標設定や、障害をリストアップしてif thenと、メイン戦略を作成して完了とした
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T074800
+DTEND:20260203T080200
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.0\nNotes: 
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T080200
+DTEND:20260203T085100
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：コメント削除ajax | 課題 詰まった/気づいた：少しロジックが繋がらなくても回転率を上げると考えた時に仮説を持って壁打ちすると理解が深まって言語化できた。目標と一致するのでよしとする
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T085500
+DTEND:20260203T093700
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：散歩、シャワー、音楽 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T093800
+DTEND:20260203T110700
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：gem 公式git読み解き 詰まった/気づいた：まず何から読めば良いか考えずに、最初から読んでいた。途中からざっくりとした達成要件のための予想を、geminiでgithubリンクを読み込ませて理解を確認した。
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T111100
+DTEND:20260203T112900
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.3\nNotes: 
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T112900
+DTEND:20260203T115200
+SUMMARY:Other | Prep
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：学習の進め方についての相談なので、相談のフローと実際に学習でのプロセスを表示できるように準備した 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T115200
+DTEND:20260203T121000
+SUMMARY:Interview | Interview
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：公式ドキュメントの読み解き方 | 学習の進め方について 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T121100
+DTEND:20260203T124300
+SUMMARY:Planning | WrapUp
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：内容の文字起こし、antigravityで管理のskills作成、昼休憩に入るので午後の学習スタートで何をするかを整理 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T124500
+DTEND:20260203T144900
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.3\nNotes: やった：昼食、昼寝(40m)、散歩 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T145000
+DTEND:20260203T155000
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：フェーズ1からフェーズ２の実行と検証 詰まった/気づいた：フェーズ１を元にしてざっくりと調べて完璧にしないで実行を意識してやった。
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T155200
+DTEND:20260203T165900
+SUMMARY:Other | Other
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：CLIを使ったソースコード解析環境構築 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260203T184800
+DTEND:20260203T191800
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：1日の振り返り、学種の言語化 詰まった/気づいた：学習中の疑問を言語化したりまとめるだけでもokと考えるだけで気持ちも楽だし心理的負荷が少なくできている
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T070100
+DTEND:20260205T071000
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：1日の学習計画 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T071300
+DTEND:20260205T081800
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.3\nNotes: やった：言語化駆動の実装フレームワーク｜フェーズ１ 詰まった/気づいた：セッションごとに時間を区切ってやることでさらに完璧主義対策や目的意識を持って学習できていた
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T082400
+DTEND:20260205T100400
+SUMMARY:Other | Other
+DESCRIPTION:Deep Score: 2.0\nNotes: 散髪
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T101000
+DTEND:20260205T104800
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：言語化駆動の実装フレームワーク｜未知特定フェーズ 詰まった/気づいた：ドキュメント読んで理解を壁うち　→　回転率を上げることができる
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T105300
+DTEND:20260205T112700
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 3.3\nNotes: やった：言語化駆動の実装フレームワーク｜実装と検証 詰まった/気づいた：1h続けていると後半は考えが雑になってきている感覚がある
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T112900
+DTEND:20260205T114800
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: 
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T114800
+DTEND:20260205T120900
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：実装と検証｜検索と全文検索のロジックについて学習 詰まった/気づいた：壁打ちをaiとすることで要点を押さえて学習できていた。注意点はどこまでも壁打ちが続くので完璧主義にならないように注意が必要
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T121300
+DTEND:20260205T124600
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：昼食、歯磨き 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T124600
+DTEND:20260205T131800
+SUMMARY:Other | Exercise
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：散歩 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T132300
+DTEND:20260205T142000
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：言語化駆動の実装フレームワーク｜フェーズ１|プロフィール編集と画像アップロード機能追加 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T142200
+DTEND:20260205T143600
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：散歩 詰まった/気づいた：このままサボって、netflixを見ても良いかなという気持ち
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T143800
+DTEND:20260205T153200
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 3.3\nNotes: やった：実装と検証｜ 詰まった/気づいた：カリキュラムを進めなが学習を進めていた。完璧主義を防ぐ。その中で、フレームワークで知識として実装のフローを言語化したり、未知をリストアップするという使い方は午後の集中力が落ちている学習には適していいる
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T153600
+DTEND:20260205T155800
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：youtubeでお気に入りの音楽を聴く 詰まった/気づいた：このまま終わってnetflixを見たいという気持ち。明日でもいい気持ちがある
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T155900
+DTEND:20260205T170400
+SUMMARY:Other | Prep
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：技術面談で相談する内容のまとめ 詰まった/気づいた：相談する時の趣旨や論点を決めるのに時間がかかるし、少し難しい。
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T170400
+DTEND:20260205T171800
+SUMMARY:Interview | Interview
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：技術面談で相談する内容のまとめ 詰まった/気づいた：相談する時の趣旨や論点を決めるのに時間がかかるし、少し難しい。
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T171900
+DTEND:20260205T173000
+SUMMARY:Planning | WrapUp
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：manusで音声か。ファイルを整理のみで完了とする 詰まった/気づいた：フレームワークに満たせているかを採点するようにskillsを構築するのと良いかも。それで技術面談のフィードバックの可視化もできるな
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260205T191100
+DTEND:20260205T195800
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：1日の振り返り、学種の言語化 詰まった/気づいた：gemの再度言語化は難しく少しまとめるのに少し時間がかかっていた。gemのドキュメントを参照しながら、再度考えやその時の思考を言語化することで、全体のフローも言語化できた
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T070400
+DTEND:20260206T071800
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：1日の学習計画 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T071800
+DTEND:20260206T081600
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：carrie wave学習 | editアクション実装 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T081600
+DTEND:20260206T090600
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：散歩、シャワー、コーヒー準備 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T090700
+DTEND:20260206T100500
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 4.0\nNotes: やった：editアクション実装 詰まった/気づいた：エラー発生時に仮説は持って、ささっとエラープロンプトで壁打ちを繰り返した方が回転率を上げることができる。１セッションでeditができるまで持って行けた
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T100700
+DTEND:20260206T102700
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.0\nNotes: 
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T102700
+DTEND:20260206T112900
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 2.0\nNotes: やった：言語化駆動の実装フレームワーク｜パスワードリセット機能 詰まった/気づいた：gem解読でメタ認知思考が働いていない。達成したことによる、明日でも良いかという気持ちで集中できていない
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T113200
+DTEND:20260206T120800
+SUMMARY:Other | Rest
+DESCRIPTION:Deep Score: 2.3\nNotes: やった：散歩、猫youtube、音楽 詰まった/気づいた：技術面談、カリキュラムをしたくないという気持ちをひたすら散歩と、ねこyouube、音楽で紛らわした
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T121000
+DTEND:20260206T123100
+SUMMARY:Other | Prep
+DESCRIPTION:Deep Score: 3.0\nNotes: やった：本当に疑問点や聞きたいことをまとめて、あとはgithubドキュメントを準備して完了 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T123100
+DTEND:20260206T124700
+SUMMARY:Interview | Interview
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：gemの読み解き方について相談 | 聞きたいことを明確化、実際に自分のプロセス、講師の方の考えを聞くというフェーズ 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T124700
+DTEND:20260206T125400
+SUMMARY:Planning | WrapUp
+DESCRIPTION:Deep Score: 2.3\nNotes: やった：manusで音声か。ファイルを整理のみで完了とする 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260206T185200
+DTEND:20260206T193400
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 2.7\nNotes: やった：1日の振り返り 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260207T073200
+DTEND:20260207T085700
+SUMMARY:Other | Exercise
+DESCRIPTION:Deep Score: 2.3\nNotes: やった：HITT 詰まった/気づいた：前日の寝る直前までベッドでipadでnetflix見ていて起きたらスッキリしなくて何もしたくないモードだったので運動へ
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260207T091600
+DTEND:20260207T100600
+SUMMARY:Coding | 👨‍💻 カリキュラム
+DESCRIPTION:Deep Score: 3.3\nNotes: やった：gem letter_opnerを クローンをcliを使って理解の壁打ち 詰まった/気づいた：学習前は漠然とした不安やサボりたい欲があった。学習をスタートすると集中できて少し楽しくなっている感覚があった。
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260207T101200
+DTEND:20260207T105200
+SUMMARY:Other | Other
+DESCRIPTION:Deep Score: 2.3\nNotes: アプリ触り
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260207T120900
+DTEND:20260207T122600
+SUMMARY:Reading | 📚 読書
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：通勤読書 詰まった/気づいた：
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260207T172400
+DTEND:20260207T174600
+SUMMARY:Planning | 🧠 計画・振り返り
+DESCRIPTION:Deep Score: 3.7\nNotes: やった：1日まとめ、gem解読の執筆 詰まった/気づいた：
+END:VEVENT
+END:VCALENDAR

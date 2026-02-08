@@ -5,7 +5,8 @@ import glob
 import re
 import sys
 from datetime import datetime, timedelta
-import dateutil.parser
+from datetime import datetime, timedelta
+import re # Ensure re is imported if not already, though likely imported above
 
 # --- Configuration ---
 BASE_DIR = '/Users/310tea/Documents/学習アウトプット'
@@ -46,22 +47,32 @@ def parse_notion_date(date_str):
     if not date_str:
         return None
     
-    # Remove (GMT+9) or similar if present, as dateutil might handle it or we assume JST
-    # Example: January 26, 2026 6:41 PM (GMT+9)
-    clean_str = re.sub(r'\s*\(.*\)', '', date_str)
+    # Remove (GMT+9) or similar if present
+    # Example: January 26, 2026 6:41 PM (GMT+9) -> January 26, 2026 6:41 PM
+    clean_str = re.sub(r'\s*\(.*\)', '', date_str).strip()
     
     try:
-        dt = dateutil.parser.parse(clean_str)
-        # Assume input is JST if no timezone info, or rely on parser
-        # If naive, localize to JST
-        if dt.tzinfo is None:
-            # Manually set to +09:00 representation
-             dt_str = dt.strftime('%Y-%m-%dT%H:%M:%S+09:00')
+        # Standard Notion export format: "Month DD, YYYY H:MM AM/PM"
+        # e.g. "December 23, 2025 9:13 AM"
+        dt = datetime.strptime(clean_str, '%B %d, %Y %I:%M %p')
+        
+        # Manually set to +09:00 representation (assuming JST from context)
+        # Create a timezone-aware datetime or just format with timezone string
+        # To match previous logic: T... +09:00
+        dt_str = dt.strftime('%Y-%m-%dT%H:%M:%S+09:00')
+        return dt_str
+
+    except ValueError:
+        # Try without AM/PM or other formats if needed, or just fail gracefully
+        # Sometimes it might just be a date "YYYY-MM-DD"
+        try:
+             dt = datetime.strptime(clean_str, '%Y-%m-%d')
+             dt_str = dt.strftime('%Y-%m-%dT00:00:00+09:00')
              return dt_str
-        else:
-             return dt.isoformat()
-    except Exception as e:
-        print(f"Date parse error for '{date_str}': {e}")
+        except ValueError:
+             pass
+
+        print(f"Date parse error for '{date_str}'")
         return None
 
 def parse_daily_markdown(date_str):
@@ -148,14 +159,23 @@ def main():
     
     sessions_by_date = {}
     all_dates = set()
+
+    # Determine "This Week" (Monday to Sunday)
+    today = datetime.now().date()
+    # Python weekday: Mon=0, Sun=6
+    start_of_week = today - timedelta(days=today.weekday())
+    end_of_week = start_of_week + timedelta(days=6)
+    
+    target_start_str = start_of_week.strftime('%Y-%m-%d')
+    target_end_str = end_of_week.strftime('%Y-%m-%d')
+    
+    print(f"Targeting logic: Current Week ({target_start_str} to {target_end_str})")
     
     # 2. Parse CSV
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             # Extract Date (YYYY-MM-DD)
-            # Notion export usually has a 'Date' column in YYYY-MM-DD
-            # If not, try to parse 'start time'
             date_val = row.get('Date', '')
             if not date_val:
                 # Fallback to start time parsing
@@ -164,6 +184,10 @@ def main():
                     date_val = st.split('T')[0]
             
             if not date_val:
+                continue
+            
+            # FILTER: Only include dates within the target week
+            if not (target_start_str <= date_val <= target_end_str):
                 continue
                 
             all_dates.add(date_val)

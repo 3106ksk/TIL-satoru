@@ -36,29 +36,40 @@ This skill takes a raw Notion markdown export of a daily log and reformats it ac
        - Subtract "Rest" duration from `Total Min`.
        - use this **Calculated Total Min** for the output.
    - Identify Technical Learnings content (body text/headers).
-      - **CRITICAL**: Watch for multiple occurrences of "Q:" or "Question:". Each "Q:" should be treated as a SEPARATE `### {Topic}` section in Technical Learnings. Do not merge them.
+      - **CRITICAL**: Watch for multiple occurrences of "Q:" or "Question:". Each "Q:" should be treated as a SEPARATE topic in Technical Learnings. Do not merge them.
+    - **Extract Research Stock**:
+      - Look for the section `### 📥 Research Stock` or `### 未解決` (or similar).
+      - If found:
+        - Extract the list items/questions under it.
+        - **Append** these items to `/Users/310tea/Documents/学習アウトプット/research_stock.md` under the `## 📥 Inbox` section.
+        - **Exclude** this section and its content from the final Daily Log output.
 
 2. **Construct new content** following this template:
+   - **Important**: Use `■` for main sections (H2 equivalent) and `**Bold**` for subsections (H3 equivalent).
+   - **Numbering**: Sequentially number the Technical Learning topics (e.g., **1. Domain: Topic**, **2. Domain: Topic**).
 
    ```markdown
    # {YYYY-MM-DD} Daily Review
 
-   ## Stats
+   ■ Stats
    - **Day Mode**: {Value}
    - **Total Min**: {Calculated Total Min} min (Excluding Rest)
    - **Deep Score**: {Value}
    - **Top1**: {Value}
 
-   ## Context & Reflection
-   ### Worked
+   ■ Context & Reflection
+   **Worked**
    - 事実: {Content} / 理由: {Content}
-   ### Slipped
+
+   **Slipped**
    - 事実: {Content} / トリガー: {Content}
-   ### Insight
+
+   **Insight**
    - 事実: {Content} / 次の一手: {Content}
 
-   ## Technical Learnings
-   ### {領域}: {具体的トピック}
+   ■ Technical Learnings
+
+   **1. {領域}: {具体的トピック}**
    - **Issue** / **Question**: {Choose based on context: Trouble vs Generic Question}
    - **Cause**: {If known}
    - **Solution/Hypothesis** / **Conclusion**: {Resolution (if Issue) / Answer (if Question)}
@@ -72,7 +83,7 @@ This skill takes a raw Notion markdown export of a daily log and reformats it ac
 3. **Apply Formatting Rules**:
    - **Remove** all other metadata lines (Created time, Tags, etc.).
    - **Remove** "Untitled" links and Notion relation link lists.
-   - Ensure headings (H1/H2/H3) match the template above.
+   - Ensure headings match the template above (using `■` and `**`).
    - Preserve code blocks with correct language identifiers.
    - Follow `docs/daily_log_golden_rules.md` for normalization details (units, labels, ordering).
 
@@ -99,7 +110,7 @@ Created time: 2026-01-27 ...
 ```markdown
 # 2026-01-27 Daily Review
 
-## Stats
+■ Stats
 - **Day Mode**: Off (OFF)
 - **Total Min**: 187 min
 ...
