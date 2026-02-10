@@ -17,6 +17,7 @@ RUNTEQ受講生としてのWeb開発学習を、メトリクスベース（Deep 
 ├── daily/                      # 日次学習ログ
 ├── Sessions/                   # セッション記録
 ├── weekly/                     # 週次ログ
+├── weekly_reviews/             # 週次レビュー
 ├── weekly_strategies/          # 週計画
 ├── sets/                       # 6週間セットアーカイブ
 │
@@ -51,7 +52,7 @@ RUNTEQ受講生としてのWeb開発学習を、メトリクスベース（Deep 
 
 ## ファイル配置フロー
 
-- **学習ログ**: `daily/`, `weekly/`, `Sessions/` に配置
+- **学習ログ**: `daily/`, `weekly/`, `weekly_reviews/`, `Sessions/` に配置
 - **計画**: `weekly_strategies/` に配置
 - **方法論・ガイドライン**: `docs/` に配置
 - **技術メモ**: `notes/<category>/` に配置（category: rails, javascript, ideas等）
