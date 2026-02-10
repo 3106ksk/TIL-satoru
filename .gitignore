@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Notion exports (binary artifacts)
+notion_exports/*.zip
+notion_exports/ExportBlock-*/
+
+# Editor & IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Agent temporary
+plans/
