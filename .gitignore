@@ -13,5 +13,4 @@ notion_exports/ExportBlock-*/
 .vscode/
 .idea/
 
-# Agent temporary
-plans/
+# plans/ は計画ファイルを追跡するなら除外しない
