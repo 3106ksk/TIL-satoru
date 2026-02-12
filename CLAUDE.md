@@ -21,6 +21,27 @@ Run `codex-review` skill at these key milestones:
 
 **Process**: Execute review → fix issues → re-review until clean. Iterate until all issues are resolved.
 
+## Skills（`.claude/skills/` 配下）
+
+### format_daily_log — Daily Review 整形
+- **発火条件**: 「dailyログを整形して」「daily_YYYY-MM-DDを作成して」等の指示
+- **入力**: `notion_exports/` 内のDaily生データ + Sessions CSV
+- **出力**: `daily/daily_YYYY-MM-DD.md`（Fact+Why形式、AI分析フィードバック付き）
+- **参照**: `.claude/skills/format_daily_log/SKILL.md`
+
+### daily_log_qc — Daily Review 品質チェック
+- **発火条件**: 「dailyログをチェックして」「QCして」等の指示、または `format_daily_log` 実行後の自動検証
+- **入力**: `daily/daily_YYYY-MM-DD.md`
+- **出力**: 準拠/非準拠のレポートと修正提案
+- **参照**: `.claude/skills/daily_log_qc/SKILL.md`
+
+### normalize_learning_log — 週次分析用データ正規化
+- **発火条件**: 「学習ログを正規化して」「JSONデータを生成して」等の指示
+- **入力**: `notion_exports/` 内のSessions CSV + `daily/` 内のMDファイル
+- **出力**: `normalized_data/normalized_data_{start}_to_{end}.json`
+- **スクリプト**: `.claude/skills/normalize_learning_log/scripts/normalize.py`
+- **参照**: `.claude/skills/normalize_learning_log/SKILL.md`
+
 ## File Management Rules
 
 ### Naming Conventions

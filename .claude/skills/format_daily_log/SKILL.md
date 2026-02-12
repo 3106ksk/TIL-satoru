@@ -33,6 +33,7 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
    - 休憩時間 = Restセッションの合計duration
    - 運動時間 = Exerciseセッションの合計duration
    - Budget達成率 = 純粋な学習時間 / Budget
+   - **Avg Deep Score = Restセッションを除外した学習セッションの平均Deep Score**
 
 ### Step 2: AI分析セクション生成
 
@@ -47,11 +48,12 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
 ### Step 3: Worked / Slipped / Insights 整形（Fact + Why形式）
 
 **整形ルール:**
-1. 各項目は必ず `**Fact**` + `**Why**` の2行構成
-2. **Fact** = セッションデータ・notesから裏取りできる客観的事実のみ（数値があれば含める）
-3. **Why** = Factの原因・メカニズム（生データの記述 + セッションログからのAI推論）
-4. Workedが空/プレースホルダーの場合、AIがセッションnotesから良かった行動を抽出して生成
-5. 1セクション最大3項目
+1. 各項目は `**N. ラベル**` + `**Fact**` + `**Why**` の3行構成
+2. **ラベル** = そのFact+Whyが何についてなのかを一言で表現（例: 「昼休憩後の即座再開」「メタ認知時間の不足」）
+3. **Fact** = セッションデータ・notesから裏取りできる客観的事実のみ（数値があれば含める）
+4. **Why** = Factの原因・メカニズム（生データの記述 + セッションログからのAI推論）
+5. Workedが空/プレースホルダーの場合、AIがセッションnotesから良かった行動を抽出して生成
+6. 1セクション最大3項目
 
 **整形の入力ソース:**
 - セッションCSVの当日レコード（notes, Deep Score, duration, Type）
@@ -60,7 +62,7 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
 
 ### Step 4: Technical Learnings 構造化
 
-生データの `## 📝 Context & Reflection` 内のQ&A・コードブロックを以下の形式で転記:
+生データの `## 📝 Context & Reflection` 内にQ&A・コードブロックが存在する場合のみ、以下の形式で転記:
 
 ```
 **{N}. {領域}: {トピック}**
@@ -72,6 +74,8 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
   コードブロック
   ```
 ```
+
+**注意**: 生データにTechnical Learningsに該当する記載がない場合、このセクション自体を省略する
 
 ### Step 5: ファイル出力
 
@@ -108,14 +112,20 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
 - {AI生成}
 
 ## ■ Worked
+
+**1. {ラベル}**
 - **Fact**: {客観的事実}
 - **Why**: {原因・メカニズム}
 
 ## ■ Slipped
+
+**1. {ラベル}**
 - **Fact**: {客観的事実}
 - **Why**: {原因・メカニズム}
 
 ## ■ Insights
+
+**1. {ラベル}**
 - **Fact**: {観察・気づき}
 - **Why**: {背景・仮説}
 
@@ -146,3 +156,4 @@ Notion生データとSessions CSVを入力に、`daily/daily_YYYY-MM-DD.md` を�
 
 - `plans/compiled-swimming-kitten.md`: フォーマット定義と整形ルールの正
 - `prompts/analysis_prompt_v2.md`: 週次分析プロンプト（このdailyが入力となる）
+- `daily/daily_2026-02-10.md`: 最新フォーマットの実例（リファレンス実装）

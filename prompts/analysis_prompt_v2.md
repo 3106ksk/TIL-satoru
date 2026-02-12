@@ -15,8 +15,15 @@
 
 【入力データ形式】
 提供されるデータは定性分析用に構造化されたJSONです。
-- `days`: 日ごとの詳細データ（`day_mode`による休日/平日判定、`reflection`による主観評価、`sessions`による行動ログ）
+- `days`: 日ごとの詳細データ
+  - `day_mode`: 休日(Off)/平日(Shift)判定
+  - `reflection`: 主観評価（`worked`, `slipped`, `insight`, `strategy_for_next_day`）
+  - `sessions`: 行動ログ（時間、カテゴリ、Deep Score、notes）
 - `weekly_summary`: 週全体の集計値
+
+※ 各dailyファイルには以下のAI生成フィードバックセクションも含まれます。週次分析ではこれらを参照し、日次レベルの分析を週単位に統合してください。
+  - `■ Top1 / Done条件 達成度フィードバック`: 各日のTop1目標とDone条件の達成度（定量・定性）
+  - `■ 時間配分フィードバック`: Budget対比の学習時間達成率と時間帯別の配分分析（定量・定性）
 
 【分析フレームワーク】
 以下の3段階（Measure -> Learn -> Build）で出力してください。
@@ -25,6 +32,8 @@
 事実ベースで1週間を俯瞰します。
 - **時間の使い方**: `sessions`内の`category`別の合計時間と割合（Coding / Interview / Reading / Planning / Other）
 - **集中度 (Zone Analysis)**: `deep_score` が `4` 以上のセッションに共通する傾向（時間帯、`category`、直前の行動など）
+- **Top1達成トレンド**: 各日の `■ Top1 / Done条件 達成度フィードバック` から、Top1目標の達成/未達パターンと、Done条件の消化率を週単位で集計
+- **Budget達成トレンド**: 各日の `■ 時間配分フィードバック` から、Budget達成率の推移と、非学習時間ブロック（長時間休憩・運動後の再開遅延等）のパターンを抽出
 - **環境要因 (Shift vs Off)**:
   - `day_mode: "Off"`（休日）の平均学習時間とDeep Score平均
   - `day_mode: "Shift"`（仕事日）の平均学習時間とDeep Score平均
@@ -48,6 +57,7 @@ JSON内の `reflection` (`worked`, `slipped`, `insight`) と `sessions` ログ�
 
 - **STOP (やめること)**: データから判明した「コスト対効果が低い行動」や「繰り返されているSlippedの原因」。
 - **START (始めること)**: `reflection.insight` や `Good Pattern` から導き出される、来週試すべき具体的なアクション（具体的かつ実行可能なもの）。
+- **Strategy連続性チェック**: 各日の `reflection.strategy_for_next_day` が翌日に実行されたか、`sessions.notes` と突合して追跡。未実行の戦略があれば、その阻害要因を分析し来週の戦略に反映。
 
 ---
 【出力ルール】

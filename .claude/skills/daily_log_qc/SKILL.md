@@ -9,7 +9,7 @@ Daily Reviewファイルが最新フォーマットに準拠しているか検�
 
 ## 検証対象フォーマット
 
-`format_daily_log` スキル（v2）で定義された構成に準拠しているかを確認する。
+`.claude/format_daily_log/SKILL.md` で定義された構成に準拠しているかを確認する。
 
 ## チェック項目
 
@@ -65,5 +65,5 @@ Daily Reviewファイルが最新フォーマットに準拠しているか検�
 
 ## 参照
 
-- `format_daily_log/SKILL.md`: 最新フォーマット定義
+- `.claude/format_daily_log/SKILL.md`: 最新フォーマット定義
 - `plans/compiled-swimming-kitten.md`: 設計経緯と整形ルールの正

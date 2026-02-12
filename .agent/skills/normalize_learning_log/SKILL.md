@@ -17,7 +17,7 @@ version: 1.0.0
 2. **正規化処理**:
    - 日時形式の統一 (ISO 8601)
    - カテゴリのマッピング (Coding, Reading, Interview, Planning, Other)
-   - Daily Review (`Worked`, `Slipped`, `Insight`) の結合
+   - Daily Review (`Worked`, `Slipped`, `Insight`, `Strategy for Next Day`) の結合
    - `Day Mode` (Shift/Off) の判定
 
 3. **出力**:

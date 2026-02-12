@@ -129,7 +129,7 @@ def parse_daily_markdown(date_str):
             # Content extraction (bullet points)
             if current_section and (stripped.startswith("-") or stripped.startswith("・")):
                 content = stripped.lstrip("-・ ").strip()
-                content = re.sub(r'^(事実|Fact)[:：]\s*', '', content)
+                content = re.sub(r'^\*{0,2}(事実|Fact|Why)\*{0,2}[:：]\s*', '', content)
                 result[current_section].append(content)
 
     except Exception as e:
