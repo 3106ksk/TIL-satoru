@@ -152,13 +152,27 @@ def find_latest_sessions_csv():
     return files[0]
 
 def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Normalize Learning Log from Notion Export')
+    parser.add_argument('file_path', nargs='?', help='Path to the specific Sessions CSV file')
+    args = parser.parse_args()
+
     print("--- Starting Learning Log Normalization ---")
     
     # 1. Find CSV
-    csv_path = find_latest_sessions_csv()
-    if not csv_path:
-        print(f"No 'Sessions DB*.csv' found in {EXPORT_DIR}")
-        sys.exit(1)
+    if args.file_path:
+        csv_path = args.file_path
+        if not os.path.exists(csv_path):
+            print(f"Error: Usage file '{csv_path}' not found.")
+            sys.exit(1)
+        print(f"Using provided CSV: {csv_path}")
+    else:
+        csv_path = find_latest_sessions_csv()
+        if not csv_path:
+            print(f"No 'Sessions DB*.csv' found in {EXPORT_DIR}")
+            sys.exit(1)
+        print(f"Auto-detected CSV: {csv_path}")
         
     print(f"Reading: {csv_path}")
     
@@ -167,14 +181,18 @@ def main():
 
     # Determine "This Week" (Monday to Sunday)
     today = datetime.now().date()
-    # Python weekday: Mon=0, Sun=6
     start_of_week = today - timedelta(days=today.weekday())
     end_of_week = start_of_week + timedelta(days=6)
     
     target_start_str = start_of_week.strftime('%Y-%m-%d')
     target_end_str = end_of_week.strftime('%Y-%m-%d')
-    
-    print(f"Targeting logic: Current Week ({target_start_str} to {target_end_str})")
+    use_auto_period = True
+
+    if args.file_path:
+        print(f"Using provided CSV with Target: Current Week ({target_start_str} to {target_end_str})")
+        # Keep use_auto_period = True to filter dates
+    else:
+        print(f"Targeting logic: Current Week ({target_start_str} to {target_end_str})")
     
     # 2. Parse CSV
     with open(csv_path, 'r', encoding='utf-8') as f:
@@ -192,8 +210,9 @@ def main():
                 continue
             
             # FILTER: Only include dates within the target week
-            if not (target_start_str <= date_val <= target_end_str):
-                continue
+            if use_auto_period:
+                if not (target_start_str <= date_val <= target_end_str):
+                    continue
                 
             all_dates.add(date_val)
             

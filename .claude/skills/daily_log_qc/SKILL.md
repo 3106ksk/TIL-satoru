@@ -23,12 +23,13 @@ Daily Reviewファイルが最新フォーマットに準拠しているか検�
   - `## ■ Worked`
   - `## ■ Slipped`
   - `## ■ Insights`
+  - `## ■ 今日の学習記録`
   - `## ■ Study Strategy for Next Day`
-  - `## ■ Technical Learnings`
+  - `## ■ Technical Learnings`（生データにQ&A・コードブロックが存在しない場合は省略可）
 
 ### 2. Stats セクション
 
-- [ ] 必須フィールド: Day Mode, Budget, Total Min, 純粋な学習時間, 休憩時間, 運動時間, Avg Deep Score, Top1, Done条件
+- [ ] 必須フィールド: Day Mode, Budget, Total Min, 純粋な学習時間, 休憩時間, 運動時間, Avg Deep Score, Top1, Done条件, 切れたら→
 - [ ] Day Mode の値: `OFF（学習日）` または `Shift（ON）`
 - [ ] 数値フィールドに `min` 単位が付いているか
 - [ ] 純粋な学習時間 + 休憩時間 + 運動時間 ≒ Total Min（誤差許容）
@@ -47,13 +48,19 @@ Daily Reviewファイルが最新フォーマットに準拠しているか検�
 - [ ] 1セクション3項目（6行）以内か
 - [ ] プレースホルダー（`[長時間学習を維持できた工夫...]` 等）が残っていないか
 
-### 5. Study Strategy / Technical Learnings
+### 5. 今日の学習記録
+
+- [ ] `今日やったこと` / `詰まったこと` / `なぜそうなったか` / `何を学んだか` の4項目が全て存在するか
+- [ ] 各項目が太字見出し（`**今日やったこと**` 等）で開始しているか
+- [ ] `詰まったこと` と `なぜそうなったか` が生データの該当記述と整合しているか
+
+### 6. Study Strategy / Technical Learnings
 
 - [ ] Study Strategy for Next Day が存在し、少なくとも1項目あるか
 - [ ] Technical Learnings の各トピックが番号付きで分離されているか
 - [ ] コードブロックに言語識別子が付いているか
 
-### 6. ノイズチェック
+### 7. ノイズチェック
 
 - [ ] Notionリンク（`Untitled`, `https://www.notion.so/...`）が残っていないか
 - [ ] メタデータ行（Created time, WeekKey, In This Week 等）が残っていないか
