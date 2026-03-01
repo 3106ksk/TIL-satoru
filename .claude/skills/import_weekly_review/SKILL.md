@@ -21,5 +21,5 @@ version: 1.0.0
 NotionからCSVをエクスポートした後、このスキルを実行してください。
 
 ```bash
-python3 /Users/310tea/Documents/Learning_log/.agent/skills/import_weekly_review/scripts/process_weekly_export.py
+python3 /Users/310tea/Documents/Learning_log/.claude/skills/import_weekly_review/scripts/process_weekly_export.py
 ```

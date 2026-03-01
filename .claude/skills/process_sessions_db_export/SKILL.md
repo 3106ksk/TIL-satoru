@@ -22,7 +22,7 @@ This skill automates the workflow of processing a raw CSV export from the Notion
 2.  **Execute Script**:
     -   Run the following command (adjusting paths and dates):
         ```bash
-        python3 /Users/310tea/Documents/Learning_log/.agent/skills/process_sessions_db_export/scripts/process_sessions.py \
+        python3 /Users/310tea/Documents/Learning_log/.claude/skills/process_sessions_db_export/scripts/process_sessions.py \
           "<input_csv_path>" \
           "YYYY-MM-DD" \
           "YYYY-MM-DD" \
@@ -47,7 +47,7 @@ This skill automates the workflow of processing a raw CSV export from the Notion
 
 **Action**:
 ```bash
-python3 /Users/310tea/Documents/Learning_log/.agent/skills/process_sessions_db_export/scripts/process_sessions.py \
+python3 /Users/310tea/Documents/Learning_log/.claude/skills/process_sessions_db_export/scripts/process_sessions.py \
   "/Users/310tea/Documents/Learning_log/notion_exports/ExportBlock-1234/Sessions/Sessions DB Export.csv" \
   "2026-01-26" \
   "2026-01-31" \

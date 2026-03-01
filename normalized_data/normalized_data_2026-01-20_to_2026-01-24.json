@@ -1,0 +1,257 @@
+{
+  "period": {
+    "start_date": "2026-01-20",
+    "end_date": "2026-01-24"
+  },
+  "weekly_summary": {
+    "total_hours": 6.85,
+    "average_deep_score": 3.26
+  },
+  "days": [
+    {
+      "date": "2026-01-20",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-01-20T10:14:00+09:00",
+          "end_time": "2026-01-20T10:55:00+09:00",
+          "duration_min": 41,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 4.0,
+          "notes": "やった：カリキュラム環境構築、ブックマーク参照ドキュメントリサーチ指示\n詰まった/気づいた："
+        }
+      ]
+    },
+    {
+      "date": "2026-01-22",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-01-22T08:12:00+09:00",
+          "end_time": "2026-01-22T09:16:00+09:00",
+          "duration_min": 64,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 4.0,
+          "notes": "やった：カリキュラム ｜ ブックマーク\n詰まった/気づいた：始める前はサボっても良いかという気持ちがあったが、学習を始めると、ブックマークの実装ロジックについて調べて知ることが楽しいという感覚があった"
+        },
+        {
+          "start_time": "2026-01-22T09:33:00+09:00",
+          "end_time": "2026-01-22T11:03:00+09:00",
+          "duration_min": 90,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：includes SQL理解\n詰まった/気づいた：実行されるsqlが何かをまずは学習。理解ができていなかったことに気づいた"
+        },
+        {
+          "start_time": "2026-01-22T11:19:00+09:00",
+          "end_time": "2026-01-22T11:48:00+09:00",
+          "duration_min": 29,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：bookmarkの実装\n詰まった/気づいた："
+        }
+      ]
+    },
+    {
+      "date": "2026-01-23",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-01-23T12:14:00+09:00",
+          "end_time": "2026-01-23T12:53:00+09:00",
+          "duration_min": 39,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：イベント企画準備\n詰まった/気づいた："
+        },
+        {
+          "start_time": "2026-01-23T18:18:00+09:00",
+          "end_time": "2026-01-23T19:06:00+09:00",
+          "duration_min": 48,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：イベント企画準備\n詰まった/気づいた："
+        },
+        {
+          "start_time": "2026-01-23T19:12:00+09:00",
+          "end_time": "2026-01-23T19:59:00+09:00",
+          "duration_min": 47,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：ブックマーク実装\n詰まった/気づいた：何をすれば良いか見当がつかないのでフォーマットを使って現状の整理。ブックマークがまず表示されていないのでつまづいている"
+        },
+        {
+          "start_time": "2026-01-23T20:15:00+09:00",
+          "end_time": "2026-01-23T20:29:00+09:00",
+          "duration_min": 14,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.0,
+          "notes": "やった：ブックマーク実装\n詰まった/気づいた：何をすれば良いか見当がつかないのでフォーマットを使って現状の整理。ブックマーク表示問題は解消→再度一覧表示の実装に戻るがタイムアップで終了"
+        }
+      ]
+    },
+    {
+      "date": "2026-01-24",
+      "day_mode": "Off",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-01-24T12:14:00+09:00",
+          "end_time": "2026-01-24T12:53:00+09:00",
+          "duration_min": 39,
+          "category": "Other",
+          "original_type": "",
+          "deep_score": 3.3,
+          "notes": "やった：ブックマークロジックについて学習\n詰まった/気づいた：AIを使って概念のリサーチ"
+        }
+      ]
+    }
+  ]
+}

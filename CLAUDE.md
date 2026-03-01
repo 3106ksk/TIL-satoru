@@ -37,10 +37,41 @@ Run `codex-review` skill at these key milestones:
 
 ### normalize_learning_log — 週次分析用データ正規化
 - **発火条件**: 「学習ログを正規化して」「JSONデータを生成して」等の指示
-- **入力**: `notion_exports/` 内のSessions CSV + `daily/` 内のMDファイル
+- **入力**: `process_sessions_db_export` が生成した `Sessions/Sessions_DB_*.md` + `daily/` 内のMDファイル
 - **出力**: `normalized_data/normalized_data_{start}_to_{end}.json`
+- **前提**: 実行前に `process_sessions_db_export` でSessions MDを生成しておくこと
 - **スクリプト**: `.claude/skills/normalize_learning_log/scripts/normalize.py`
 - **参照**: `.claude/skills/normalize_learning_log/SKILL.md`
+
+### import_weekly_review — Weekly Review CSV取込
+- **発火条件**: 「Weekly Reviewを取り込んで」等
+- **入力**: `notion_exports/` 内のWeekly Review CSV
+- **出力**: `weekly/weekly_YYYY-MM-DD_to_YYYY-MM-DD.md`
+- **参照**: `.claude/skills/import_weekly_review/SKILL.md`
+
+### organize_interview_transcript — 面接記録整理
+- **発火条件**: 「面接ファイルを整理して」等
+- **入力**: 面接トランスクリプトファイル
+- **出力**: `technical_interviews/transcripts/YYYY-MM-DD_<Topic>.<ext>`
+- **参照**: `.claude/skills/organize_interview_transcript/SKILL.md`
+
+### process_sessions_db_export — Sessions CSV→MD変換（現行実装）
+- **発火条件**: 「SessionsのCSVを処理して」等
+- **入力**: `notion_exports/` 内のSessions DB CSV
+- **出力**: `Sessions/Sessions_DB_YYYY-MM-DD_to_YYYY-MM-DD.md`
+- **参照**: `.claude/skills/process_sessions_db_export/SKILL.md`
+
+### weekly_planning_assistant — 週次戦略策定
+- **発火条件**: 「今週の戦略を作って」等
+- **入力**: 週次戦略設計入力 + 前週データ
+- **出力**: `weekly_strategies/` JSON + `risk_assessments/` MD
+- **参照**: `.claude/skills/weekly_planning_assistant/SKILL.md`
+
+### create_community_report — コミュニティレポート生成
+- **発火条件**: 「コミュニティレポートを作成して」等
+- **入力**: 週次戦略JSON + リスク評価MD
+- **出力**: `community_reports/YYYY-MM-DD_to_YYYY-MM-DD_report.md`
+- **参照**: `.claude/skills/create_community_report/SKILL.md`
 
 ## File Management Rules
 
