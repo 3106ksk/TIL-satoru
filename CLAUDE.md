@@ -55,6 +55,13 @@ Run `codex-review` skill at these key milestones:
 - **出力**: `technical_interviews/transcripts/YYYY-MM-DD_<Topic>.<ext>`
 - **参照**: `.claude/skills/organize_interview_transcript/SKILL.md`
 
+### extract_daily_sessions — Daily Sessions 抽出
+- **発火条件**: 「セッション記録を抽出して」「今日のセッションを出力して」等の指示
+- **入力**: `notion_exports/` 内のSessions DB CSV + 対象日付
+- **出力**: `daily_sessions_record/sessions_YYYY-MM-DD.md`
+- **スクリプト**: `.claude/skills/extract_daily_sessions/scripts/extract_daily_sessions.py`
+- **参照**: `.claude/skills/extract_daily_sessions/SKILL.md`
+
 ### process_sessions_db_export — Sessions CSV→MD変換（現行実装）
 - **発火条件**: 「SessionsのCSVを処理して」等
 - **入力**: `notion_exports/` 内のSessions DB CSV
@@ -66,6 +73,12 @@ Run `codex-review` skill at these key milestones:
 - **入力**: 週次戦略設計入力 + 前週データ
 - **出力**: `weekly_strategies/` JSON + `risk_assessments/` MD
 - **参照**: `.claude/skills/weekly_planning_assistant/SKILL.md`
+
+### generate_daily_plan — 学習計画（Daily Plan）生成
+- **発火条件**: 「学習計画を作成して」「daily planを生成して」「〇月〇日の目標を作って」等の指示
+- **入力**: 対象日付 + Day Mode + 学習可能時間 + `weekly_strategies/` + `daily/daily_{前日}.md` + `daily_plan/daily_{前日}_plan.md`
+- **出力**: `daily_plan/daily_YYYY-MM-DD_plan.md`
+- **参照**: `.claude/skills/generate_daily_plan/SKILL.md`
 
 ### create_community_report — コミュニティレポート生成
 - **発火条件**: 「コミュニティレポートを作成して」等
