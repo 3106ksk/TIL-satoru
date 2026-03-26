@@ -27,11 +27,28 @@ Notion Sessions DB CSVから指定した1日分のセッションレコードを
       "/Users/310tea/Documents/Learning_log/daily_sessions_record"
     ```
 
-3. **出力確認**:
+3. **【OBL戦略】翌朝knowledge_organization結合判定**:
+
+    OBL期間中は「夜間固定枠廃止 → 夜間は事実記録のみ、翌朝に加筆」戦略を実施中。
+    そのため、**スクリプト実行後**に以下を判定する：
+
+    - ユーザーから提供された生データ（または翌日CSVレコード）に `type: knowledge_organization` が存在するか確認
+    - そのNotesに「前日の学習振り返りとまとめ」「学習ログ作成」等の記述があるか確認
+    - **両方を満たす場合 → 該当日のsessionsファイルに結合する**（翌日ファイルからは削除）
+
+    結合時の処理：
+    - 対象日のsessionsファイル末尾にセッション行を追加（`#N`は連番）
+    - Notes欄に `※翌朝実施` を付記
+    - Summary（Total Sessions, Total Duration, Deep Flag, Avg Deep Score）を再計算して更新
+    - 翌日ファイルからセッション行・Notes・Summaryを更新
+
+    > **Avg Deep Score (active)** = Rest以外のセッションのDeep Scoreの平均
+
+4. **出力確認**:
     - `daily_sessions_record/sessions_YYYY-MM-DD.md` が生成されたことを確認する
     - 結果をユーザーに報告する
 
-4. **クリーンアップ**:
+5. **クリーンアップ**:
     - 元のCSVファイルが他のスキル（`process_sessions_db_export`等）でも使用される場合は削除しない
     - CSVが不要であることをユーザーに確認してから削除する
 

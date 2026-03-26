@@ -1,0 +1,864 @@
+{
+  "period": {
+    "start_date": "2026-03-16",
+    "end_date": "2026-03-22"
+  },
+  "weekly_summary": {
+    "total_hours": 32.98,
+    "average_deep_score": 3.38
+  },
+  "days": [
+    {
+      "date": "2026-03-16",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-16T12:46:00+09:00",
+          "end_time": "2026-03-16T13:20:00+09:00",
+          "duration_min": 34,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 2.7,
+          "notes": "**やった**: 公式LT会のためのイベントページ作成や雑務"
+        },
+        {
+          "start_time": "2026-03-16T18:28:00+09:00",
+          "end_time": "2026-03-16T20:24:00+09:00",
+          "duration_min": 116,
+          "category": "Other",
+          "original_type": "weekly review",
+          "deep_score": 4.0,
+          "notes": "**やった**: 1週間の振り返りとrunteqレポート作成"
+        }
+      ],
+      "missing_daily_context": {
+        "daily_completed": false,
+        "reason": "weekly reviewセッション（18:28-20:24）が最終作業となり、週次振り返りとRunteqレポート作成で終了。先週末に実施するはずだった週次振り返りが翌週にずれ込んでしまいdailyルーティンをが実行できなかった。",
+        "inferred_from": "sessions data: last session was weekly review (18:28-20:24), no subsequent daily_review session recorded"
+      }
+    },
+    {
+      "date": "2026-03-17",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 120,
+        "total_min": 168,
+        "pure_study_min": 168,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 3.72
+      },
+      "plan": {
+        "top1": "Tips詳細表示の実装方針を3段階分解で決定",
+        "done_condition": "Tips詳細表示の実装方針が3段階分解（機能→ユーザーアクション→必要なコード処理）で記述されている。ベストはMVCの枠組みがイメージできていてコードとして書けている状態",
+        "if_interrupted": "方針メモ化のみ完了してOK。実装着手は3/19以降でも可。"
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [
+            "言語化フレームワークに費やしたセッション: #2（45min, DS4.0）+ #4（11min, DS3.3）= 56min",
+            "Done条件（3段階分解の記述）: 未達成。セッション#4ノートに「考えれなくなったので今日は終了とする」と明記",
+            "後退条件の「方針メモ化のみ」も完遂できなかった可能性が高い"
+          ],
+          "qualitative": [
+            "夜間ブロックの大半（81min）をスキーマ修正・URL動作確認という認知負荷の高い実装タスクに投入した結果、言語化作業（#4）の段階でリソースが枯渇していた",
+            "Slippedにある「２つの認知的負荷の高いタスク完了後に言語化は無理だった」という記述がそれを裏付ける",
+            "Daily Planの順序（Step1: 機能要件整理→Step2: 3段階分解→Step3: MVC落とし込み）を踏まずに実装（URL確認）を先行させた点が、Done条件未達の構造的原因"
+          ]
+        },
+        "time_allocation": {
+          "quantitative": [
+            "Budget達成率: 168 / 120 = 140%（+48min超過達成）",
+            "午前ブロック（11:34–12:42）: 68 min（planning 23m + mini_app_dev 45m）",
+            "夜間ブロック（18:20–20:04）: 100 min（mini_app_dev 81m + mini_app_dev 11m + daily_review 8m）",
+            "休憩: 0 min / 運動: 0 min",
+            "19:52–19:56 の4分間のみギャップあり"
+          ],
+          "qualitative": [
+            "Budgetを大幅に超過したのは、URL動作確認（#3, 81min）が予想より長引いたため。実装デバッグは終了時刻が読めないタスクであり、Shift後の限られたリソースで着手すると時間オーバーしやすい",
+            "午前ブロック（DS4.3→4.0）は高DS帯だったが、本来のTop1（言語化）ではなく翌日以降の実装準備に使われた",
+            "夜間の実質的な学習リズムは「実装81min→失速11min→review8min」で、エネルギー配分が前半集中・後半ゼロの構造"
+          ]
+        }
+      },
+      "reflection": {
+        "worked": [
+          "セッション#3（81min, DS3.7）でスキーマ修正・URL保存動作確認を完了。strong parameterの設定漏れ（`:reference_url`未設定）を特定・修正した",
+          "エラーログ（`Unpermitted parameter: :reference_url`）を追う形でデバッグを進めたことで、nilの根本原因をDB保存段階で特定できた。実装の優先順位を外部URL確認に絞ったため、1セッション内で決着できた",
+          "セッション#1（DS4.3）→#2（DS4.0）と2セッション連続でDeep Flag獲得。合計68min",
+          "Shift前の午前帯は認知リソースが満タン状態であり、計画→実装という自然な流れが集中を維持させた。スマホ別室設置などのIf-Thenトリガーが機能した可能性がある"
+        ],
+        "slipped": [
+          "セッション#4（mini_app_dev, 11min, DS3.3）でTop1の言語化フレームワークを試みたが「考えれなくなったので今日は終了とする」と中断。Done条件未達成",
+          "Shift終了後にスキーマ修正・URL実装（2タスク、認知負荷大）を先行させたため、言語化（設計系）に回せるリソースが残っていなかった。Daily Planが想定したタスクシーケンス（言語化→実装）と逆順になったことが直接原因",
+          "Daily PlanはStep1-3を言語化・設計に充てる設計だったが、実際はURL実装確認（実装系）を先行させた",
+          "「URL動作が未確認のまま詳細一覧の方針を考えることへの不安」がシーケンス変更を引き起こしたと推測される。実装の不確定要素を先に潰したいという自然な判断だが、Top1達成との優先順位が逆転した"
+        ],
+        "insight": [
+          "実装デバッグ（81min）→言語化（11min, 中断）という順序でTop1未達",
+          "実装デバッグは認知負荷が高く、終了後に設計・言語化系タスクを置くと失速する。Shift日は特にリソースが限られるため、Top1タスクを最初のブロックに置く設計が必要",
+          "URL確認をセッション#3（81min）で完了。strong parameterデバッグに予想外の時間がかかった",
+          "DBへの保存エラーはフロントエンドのデバッグとは異なり、ログ調査→コード修正→再検証のサイクルが必要。Shift後の90-120minバジェットにこの種のタスクを組み込む場合は、完了しなくても翌日持ち越せる切り口を最初に決めておくべき"
+        ],
+        "strategy_for_next_day": [
+          "一覧表示着手とブラウザで全ての項目が確認できる。外部リンクをクリックするとリンク先へ移動する"
+        ]
+      },
+      "learning_record": {
+        "what_i_did": [
+          "午前中は学習計画（23min, DS4.3）の後、詳細一覧の言語化フレームワーク作業（45min, DS4.0）に取り組んだ",
+          "Shift終了後の夜間ブロックでは、前回未検証だったTips投稿のURL機能（スキーマ・画面遷移の動作確認）を実施（81min）。strong parameterの設定漏れ（`:reference_url`）を特定・修正し、外部リンクの表示機能を完成させた",
+          "その後、詳細一覧の言語化（11min）を試みたが認知リソース枯渇で中断し、daily reviewで締めた"
+        ],
+        "what_i_struggled_with": [
+          "マイグレーションファイル実行時のミス（詳細不明、修正済み）",
+          "外部URLの文字列がブラウザからのPOSTでは正常に送信されているにもかかわらず、DBへの保存でnilになっていた"
+        ],
+        "why_it_happened": [
+          "strong parameterに`:reference_url`が未設定だったため、Railsが`Unpermitted parameter: :reference_url`として弾いていた。新カラム追加時にcontrollerのpermitリストへの追加を忘れたことが原因"
+        ],
+        "what_i_learned": [
+          "Railsで新カラムを追加した際は、対応するcontrollerのstrong parameterにもそのカラム名を追加する必要がある",
+          "`Unpermitted parameter: :xxx`というログがDBへの保存失敗の根本原因を示している。ブラウザ→サーバー間の通信は正常でも、controller段階でフィルタされてnilになるケースがある"
+        ]
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-17T11:34:00+09:00",
+          "end_time": "2026-03-17T11:57:00+09:00",
+          "duration_min": 23,
+          "category": "Other",
+          "original_type": "🧠 planning",
+          "deep_score": 4.3,
+          "notes": "**やった**: 学習計画"
+        },
+        {
+          "start_time": "2026-03-17T11:57:00+09:00",
+          "end_time": "2026-03-17T12:42:00+09:00",
+          "duration_min": 45,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.0,
+          "notes": "**やった**: 詳細一覧に対して言語化フレームワーク"
+        },
+        {
+          "start_time": "2026-03-17T14:56:00+09:00",
+          "end_time": "2026-03-17T15:10:00+09:00",
+          "duration_min": 14,
+          "category": "Other",
+          "original_type": "daily_review",
+          "deep_score": 4.3,
+          "notes": "**やった**: 前日の学習振り返りとまとめ"
+        },
+        {
+          "start_time": "2026-03-17T18:20:00+09:00",
+          "end_time": "2026-03-17T19:41:00+09:00",
+          "duration_min": 81,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 3.7,
+          "notes": "**やった**: 外部サイトリンクの表示｜tips投稿のurlと画面遷移の動作が検証できていなかったので、一覧詳細実装前に動作を確認するための検証と完了\n**詰まった/気づいた**: マイグレファイル実行時にミスをしていたのでそれを修正"
+        },
+        {
+          "start_time": "2026-03-17T19:41:00+09:00",
+          "end_time": "2026-03-17T19:52:00+09:00",
+          "duration_min": 11,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 3.3,
+          "notes": "**やった**: 詳細一覧に対して言語化フレームワーク\n**詰まった/気づいた**: 考えれなくなったので今日は終了とする。"
+        },
+        {
+          "start_time": "2026-03-17T19:56:00+09:00",
+          "end_time": "2026-03-17T20:04:00+09:00",
+          "duration_min": 8,
+          "category": "Other",
+          "original_type": "daily_review",
+          "deep_score": 3.3,
+          "notes": "**やった**: 1日振り返り"
+        }
+      ],
+      "daily_completed": true
+    },
+    {
+      "date": "2026-03-19",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 180,
+        "total_min": 317,
+        "pure_study_min": 213,
+        "rest_min": 104,
+        "exercise_min": 0,
+        "avg_deep_score": 4.0
+      },
+      "plan": {
+        "top1": "Tips詳細表示画面の実装完了",
+        "done_condition": "詳細表示画面がブラウザで表示される / 全項目（タイトル・本文・外部URL等）が画面上で確認できる / 外部リンクをクリックするとリンク先へ移動できる",
+        "if_interrupted": "実装が詰まる場合はMVC枠組みのメモ化のみ完了してOK。ただし技術面談予約は今日中に必ず確定させること"
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [
+            "Top1「Tips詳細表示画面の実装完了」に対して、mini_app_devセッション3本（#4: 43m, #6: 41m, #10: 27m）計111mを投下",
+            "セッション#6（17:06-17:47）のnotesに「詳細機能実装｜実装完了」と記録。Top1はセッション内で達成判定",
+            "Done条件「外部リンク遷移動作確認」については、#6のnotes「参照が問題なく機能するかをチェック」から確認実施の事実あり",
+            "技術面談実施・予約確定に相当するセッションは生データ・セッション記録ともに記録なし（Done条件の一部未達）"
+          ],
+          "qualitative": [
+            "セッション#4→#6の連続実施で詳細機能実装を一気に完遂。既存プロジェクトを参照しながら「理解済みの箇所は脳死コピペ」で差分のみを実装するアプローチが機能し、想定より早い完了につながった",
+            "実装完了後にセッション#10でプロフィール実装の言語化へ移行しており、Top1達成後に次フェーズへの橋渡しまで実行できている。週次戦略の流れに沿った進捗",
+            "技術面談予約はDone条件に設定されていたにもかかわらず、記録がない。実装の集中が優先され、管理タスクが後回しになったと推測される"
+          ]
+        },
+        "time_allocation": {
+          "quantitative": [
+            "Budget 180min に対し純粋な学習時間 213min（達成率118.3%、超過+33min）",
+            "休憩104min（全体317minの32.8%）、運動0min",
+            "午後ブロック（14:56-17:47）: 学習128min（#2:14m + #3:30m + #4:43m + #6:41m）/ 休憩79min（#1:48m + #5:31m）",
+            "夜間ブロック（18:22-19:49）: 学習85min（#8:7m + #9:39m + #10:27m + #11:12m）/ 休憩25min（#7:25m）",
+            "※翌朝session #12（knowledge_organization, 28m）は翌日実施分として上記集計に含めず"
+          ],
+          "qualitative": [
+            "帰宅後シャワー・昼食（48min, session #1）を経て14:56にdaily_reviewで即スタート。午後ブロックを最大限活用できている",
+            "散歩休憩（session #5: 31m）をmini_app_dev間に挿入し、後半セッションもDS 4.3を維持。スマホ不使用の休憩が切り替えコストの低下に寄与したと考えられる",
+            "夜間の動画学習（session #9: 39m）は途中で方針転換し、プロフィール実装の言語化に切り替えた。学習の流れを止めず実装優先に修正できたのはリズム維持の観点で良好"
+          ]
+        }
+      },
+      "reflection": {
+        "worked": [
+          "散歩休憩（session #5: 31m）挿入後のsession #6がDS 4.3を記録。午後・夜間を通じてDS 4.0以上を連続維持した",
+          "帰宅後および休憩中にスマホ・iPadを使用しないことを意識したことで、情報刺激による認知リソースの消耗が抑えられ、学習再開時の切り替えが素早くなったため",
+          "session #4のnotes「すでに理解している箇所は脳死でコピペ戦略でもokというアプローチ」を採用し、#4(43m)→#6(41m)の84mで詳細機能実装を完遂。実装完了後はプロフィール機能の言語化（session #10: 27m）まで進んだ",
+          "既存プロジェクトを参照しながら差分のみを実装することで、既知の処理に認知リソースを消費せず、判断が必要な部分に集中できたため",
+          "session #6で詳細機能実装完了後、#8で疑問点・フローをまとめ（7m）、#9の動画学習途中で方針転換し#10でプロフィール実装の言語化（27m）へ移行した",
+          "「まず完成、改善の過程で学ぶ」という判断が実装中に形成され（session #9 notes参照）、学習の勢いを維持したまま次フェーズへのブリッジを置くことができた"
+        ],
+        "slipped": [
+          "Daily PlanのDone条件に「技術面談実施または予約確定」が設定されていたが、生データ・セッション記録ともに該当の記録がない",
+          "実装セッション（#4,#6,#10）への集中が優先され、管理タスクである面談予約のトリガーが発火しなかった可能性がある。実装の流れの中にリマインダーが組み込まれていなかった",
+          "開発ログに「daisyUIかTailwind CSSかで迷っている状態。コストを明確にする必要がある」と記録。当日中に選定決定はされていない",
+          "アプリ設計段階での技術選定フェーズの準備不足が根本原因（生データ記述）。実装段階でdaisyUIのカスタムコストが想定より高いと判明し、トレードオフを再評価する時間が生じた"
+        ],
+        "insight": [
+          "生データInsightsに「Tips開発がカリキュラムとほぼ同内容で、進捗が不安になる」と記述。session #11のnotes「開発手法に対して漠然とした不安」と一致する",
+          "カリキュラムの既習内容をアプリで再実装しているため差分が小さく感じられる。「曖昧だった部分が言語化できている」という質的な前進が、目に見える機能追加と比べて可視化されにくいフェーズにある",
+          "session #9（39m）でオブジェクト指向動画学習を開始したが途中で中断し、プロフィール実装の言語化に切り替えた",
+          "動画学習中に「まず完成、改善しながらオブジェクト指向を習得した方がよい」という判断が生まれた。現フェーズでは体系的学習より実装を通じた習得の方がサイクルを維持できると認識した"
+        ],
+        "strategy_for_next_day": [
+          "プロフィール編集機能の開発について言語化、関連技術のリサーチと実装完了"
+        ]
+      },
+      "learning_record": {
+        "what_i_did": [
+          "帰宅後シャワー・昼食（48m）を挟み、14:56からdaily_reviewでスタート。前日の振り返りをまとめた後、学習ログ作成とmatomeへの共有（30m）を実施",
+          "15:51からmini_app_devへ移行。既存プロジェクトを参照しながら詳細機能（show画面）を実装（43m）。散歩31m休憩を挟んで実装を継続し、17:47に詳細機能実装完了",
+          "実装完了後、フロー・疑問点をまとめ（7m）。続いてオブジェクト指向の動画学習（39m）を開始したが途中で「まず完成」の方針に切り替え、プロフィール実装の言語化へ移行（27m）",
+          "夜にdaily_review（12m）でまとめ。翌朝にknowledge_organizationで前日内容を整理・ログ作成（28m）"
+        ],
+        "what_i_struggled_with": [
+          "daisyUIかTailwind CSSかのCSSライブラリ選定が固まらず、UI実装方針が未決のまま",
+          "技術面談予約の実施・確認ができなかった"
+        ],
+        "why_it_happened": [
+          "daisyUIは自分がイメージするUIを実現するにはカスタム学習が必要と判明した。Tailwind CSSとのコスト差が不明瞭で判断できなかった。設計段階での技術選定フェーズが不十分だったことが根本的な原因",
+          "実装セッションへの集中が優先され、面談予約という管理タスクへのスイッチングが発生しなかった"
+        ],
+        "what_i_learned": [
+          "「理解済みの箇所は脳死コピペ戦略でOK」というアプローチで既知部分の実装速度を上げ、認知リソースを新規判断が必要な部分に集中できる",
+          "動画学習は「完成してから改善の中で学ぶ」フェーズに後回しにすることで、実装の勢いを維持できる",
+          "帰宅後・休憩中のスマホ不使用が、学習セッション再開時の切り替えコストを低下させる効果がある"
+        ]
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-19T07:52:00+09:00",
+          "end_time": "2026-03-19T08:20:00+09:00",
+          "duration_min": 28,
+          "category": "Other",
+          "original_type": "knowledge_organization",
+          "deep_score": 4.7,
+          "notes": "**やった**: 前日の学習振り返りとまとめ、学習ログ作成\n**詰まった/気づいた**: 前日の書き出したラフな内容を整理。論理構成や意味の伝わりやすさを再度チェック"
+        },
+        {
+          "start_time": "2026-03-19T14:08:00+09:00",
+          "end_time": "2026-03-19T14:56:00+09:00",
+          "duration_min": 48,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: シャワー、昼食"
+        },
+        {
+          "start_time": "2026-03-19T14:56:00+09:00",
+          "end_time": "2026-03-19T15:10:00+09:00",
+          "duration_min": 14,
+          "category": "Other",
+          "original_type": "daily_review",
+          "deep_score": 4.3,
+          "notes": "**やった**: 前日の学習振り返りとまとめ"
+        },
+        {
+          "start_time": "2026-03-19T15:21:00+09:00",
+          "end_time": "2026-03-19T15:51:00+09:00",
+          "duration_min": 30,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 3.0,
+          "notes": "**やった**: 学習ログ作成とマタモへ内容シェア"
+        },
+        {
+          "start_time": "2026-03-19T15:51:00+09:00",
+          "end_time": "2026-03-19T16:34:00+09:00",
+          "duration_min": 43,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.3,
+          "notes": "**やった**: 詳細機能実装｜既存プロジェクトを参考にしながら作成\n**詰まった/気づいた**: すでに理解している箇所は脳死でコピペ戦略でもokというアプローチ"
+        },
+        {
+          "start_time": "2026-03-19T16:35:00+09:00",
+          "end_time": "2026-03-19T17:06:00+09:00",
+          "duration_min": 31,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: 散歩"
+        },
+        {
+          "start_time": "2026-03-19T17:06:00+09:00",
+          "end_time": "2026-03-19T17:47:00+09:00",
+          "duration_min": 41,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.3,
+          "notes": "**やった**: 詳細機能実装｜実装完了\n**詰まった/気づいた**: 参照が問題なく機能するかをチェック、実際にユーザーが使った場合の状態を確認したいので、一旦実装メモを15分でまとめてから、次はプロフィール機能へ"
+        },
+        {
+          "start_time": "2026-03-19T17:51:00+09:00",
+          "end_time": "2026-03-19T18:16:00+09:00",
+          "duration_min": 25,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": ""
+        },
+        {
+          "start_time": "2026-03-19T18:22:00+09:00",
+          "end_time": "2026-03-19T18:29:00+09:00",
+          "duration_min": 7,
+          "category": "Other",
+          "original_type": "knowledge_organization",
+          "deep_score": 4.0,
+          "notes": "**やった**: 詳細機能実装｜フローや疑問点のまとめ\n**詰まった/気づいた**: 今回は一旦できたのでokとする。細かい疑問やパーシャルやturboの実装は一旦は後回しにして全体の感性を優先することにしたので簡単にまとめて完了"
+        },
+        {
+          "start_time": "2026-03-19T18:31:00+09:00",
+          "end_time": "2026-03-19T19:10:00+09:00",
+          "duration_min": 39,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 3.3,
+          "notes": "**やった**: 動画学習\n**詰まった/気づいた**: オブジェクト指向をざっと見た方が次の実装で役立つと考えてみていたが、途中でまずは完成。改善を繰り返す過程でオブジェクト指向を身につけた方が良いと考えた。なので実装中の疑問点や設計についてはログを残しておく。再度プロフィール実装の言語化フェーズに戻ることに"
+        },
+        {
+          "start_time": "2026-03-19T19:10:00+09:00",
+          "end_time": "2026-03-19T19:37:00+09:00",
+          "duration_min": 27,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.0,
+          "notes": "**やった**: プロフィール実装の言語化｜"
+        },
+        {
+          "start_time": "2026-03-19T19:37:00+09:00",
+          "end_time": "2026-03-19T19:49:00+09:00",
+          "duration_min": 12,
+          "category": "Other",
+          "original_type": "daily_review",
+          "deep_score": 3.7,
+          "notes": "**やった**: 学習内容まとめ｜定性面振り返り\n**詰まった/気づいた**: 開発手法に対して漠然とした不安"
+        }
+      ],
+      "daily_completed": true
+    },
+    {
+      "date": "2026-03-20",
+      "day_mode": "Shift",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-20T07:09:00+09:00",
+          "end_time": "2026-03-20T07:36:00+09:00",
+          "duration_min": 27,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.0,
+          "notes": "**やった**: 散歩、シャワー\n**詰まった/気づいた**: 日光を浴びて体内時計をスタートかつ身体を軽く動かすため"
+        },
+        {
+          "start_time": "2026-03-20T07:36:00+09:00",
+          "end_time": "2026-03-20T07:52:00+09:00",
+          "duration_min": 16,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 2.0,
+          "notes": "**やった**: コーヒー準備"
+        },
+        {
+          "start_time": "2026-03-20T07:52:00+09:00",
+          "end_time": "2026-03-20T08:20:00+09:00",
+          "duration_min": 28,
+          "category": "Other",
+          "original_type": "knowledge_organization",
+          "deep_score": 4.7,
+          "notes": "**やった**: 前日の学習振り返りとまとめ、学習ログ作成\n**詰まった/気づいた**: 前日の書き出したラフな内容を整理。論理構成や意味の伝わりやすさを再度チェック"
+        },
+        {
+          "start_time": "2026-03-20T08:20:00+09:00",
+          "end_time": "2026-03-20T09:17:00+09:00",
+          "duration_min": 57,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 3.3,
+          "notes": "**やった**: dev_logのフォーマット修正"
+        },
+        {
+          "start_time": "2026-03-20T09:18:00+09:00",
+          "end_time": "2026-03-20T09:27:00+09:00",
+          "duration_min": 9,
+          "category": "Other",
+          "original_type": "🧠 planning",
+          "deep_score": 3.7,
+          "notes": "**やった**: 学習計画｜1日のプランをaiで作成"
+        },
+        {
+          "start_time": "2026-03-20T09:28:00+09:00",
+          "end_time": "2026-03-20T10:02:00+09:00",
+          "duration_min": 34,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.0,
+          "notes": ""
+        },
+        {
+          "start_time": "2026-03-20T10:02:00+09:00",
+          "end_time": "2026-03-20T10:38:00+09:00",
+          "duration_min": 36,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 2.0,
+          "notes": "**やった**: プロフィール実装の言語化｜"
+        },
+        {
+          "start_time": "2026-03-20T10:38:00+09:00",
+          "end_time": "2026-03-20T11:27:00+09:00",
+          "duration_min": 49,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 2.0,
+          "notes": "**やった**: 緊急MTG"
+        },
+        {
+          "start_time": "2026-03-20T11:27:00+09:00",
+          "end_time": "2026-03-20T12:15:00+09:00",
+          "duration_min": 48,
+          "category": "Other",
+          "original_type": "Exercise",
+          "deep_score": 2.0,
+          "notes": ""
+        }
+      ],
+      "missing_daily_context": {
+        "daily_completed": false,
+        "reason": "緊急MTG（10:38-11:27）が発生し、学習セッションが12:15で終了。午後は外出を元々予定しており中断せざるを得なかった、帰宅後の18:00- 20:00に学習の再開を試みたがオンラインでの受講生との交流を行ったため学習時間を確保できなかった",
+        "inferred_from": "sessions data: emergency meeting at 10:38-11:27, all sessions ended at 12:15 with no evening sessions"
+      }
+    },
+    {
+      "date": "2026-03-21",
+      "day_mode": "Off",
+      "stats": {
+        "budget_min": 360,
+        "total_min": 675,
+        "pure_study_min": 492,
+        "rest_min": 150,
+        "exercise_min": 33,
+        "avg_deep_score": 4.2
+      },
+      "plan": {
+        "top1": "プロフィール表示・編集機能の実装完了（3/20持ち越し）",
+        "done_condition": "プロフィール表示画面がブラウザで確認できる / プロフィール編集機能が動作する",
+        "if_interrupted": "（未設定）"
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [
+            "プロフィール実装関連セッション: 計7本（#1, #3, #4, #5, #7, #9, #10）、合計 397 min",
+            "Done条件①（表示機能）: #3（10:12-10:50, 38m）で完了 ✅",
+            "Done条件②（編集機能）: #4（10:51-11:04, 13m）で完了 ✅",
+            "Top1達成後、フラッシュメッセージ（#7+#9: 計 144m）+ ヘッダーUI修正（#10: 87m）まで追加実施"
+          ],
+          "qualitative": [
+            "前日3/20の持ち越しタスク（プロフィール表示の言語化）を午前イチのセッション#1（116m, DS 4.7）で解消し、#3で表示機能完了。計画通りのTop1到達を実現した",
+            "編集機能（#4: 13m）は「理解済みのコードを脳死コピペ」戦略で最小時間・最小認知コストで完了。スコープを広げるための判断として機能している",
+            "Top1完了後にフラッシュメッセージとTailwind CSSヘッダーまで展開しており、週次成功条件に対して大幅に前進した1日"
+          ]
+        },
+        "time_allocation": {
+          "quantitative": [
+            "Budget: 360 min → 純粋な学習時間: 492 min（達成率 136.7%、+132 min）",
+            "午前（7:58-11:34）: 学習 196 min（#1+#3+#4+#5）+ 休憩 18 min",
+            "昼休憩（11:35-13:23）: 108 min（食事・散歩）",
+            "午後（13:24-17:43）: 学習 231 min（#7+#9+#10）+ 休憩 24 min + 運動 33 min",
+            "夜（18:52-19:23）: 31 min（daily_review）/ 翌朝（7:59-8:33）: 34 min（knowledge_organization）"
+          ],
+          "qualitative": [
+            "午前は DS 4.7→4.7→4.3→4.0 と高水準で推移。昼休憩（108m）は食事＋散歩の「意図的な離脱」で、休憩後の#7（DS 4.3, 113m）でスムーズに高水準へ復帰している",
+            "昼休憩後の再開直後（#9: DS 3.7）に一時的な集中低下が見られるが、その後の#10（DS 4.0, 87m）で回復。昼休憩起因の再起動コストとして典型的なパターン",
+            "Budget 360minに対し492min（+132m）の超過は、フラッシュメッセージとTailwind CSS学習の追加によるもの。強制感のない自然な延長であり、燃え尽きパターンとは異なる"
+          ]
+        }
+      },
+      "reflection": {
+        "worked": [
+          "プロフィール表示（#3: 38m）・編集（#4: 13m）をセッション合計51mで完了。既存カリキュラムのコードをコピペ＋AI指示で実装",
+          "優先度の低い機能に認知リソースを使わず、理解済みパターンを適用する「脳死コピペ戦略」を継続。「完成させてから改善」の原則を実行した",
+          "#7（113m）でフラッシュメッセージの使い方をランテくんで確認しながら実装。#9（31m）でUsersController・UserSessionsController・TipsController・ProfilesControllerの4コントローラー全て完了",
+          "UIを確認しながら実装するアプローチで抽象的な学習より動作確認を優先。バニラCSSとTailwind CSSを意識しながらスタイルを作成し、学習コストを最小化しながら実装を前進させた",
+          "#10（87m）でバニラCSSとTailwind CSSの記述対応をメモしながらヘッダーレイアウト修正を完了。チートシートと公式ドキュメントを活用した",
+          "「プロジェクトベースでCSSを学ぶ戦略」が奏功。動くものを作りながら体で覚えるアプローチで学習コストを抑えた"
+        ],
+        "slipped": [
+          "#6（11:35-13:23, 108m）で食事＋散歩。午前の高集中ブロック終了後、1h48mの離脱となり午後スタートが13:24まで後倒し",
+          "生データでの特記なし。午前終了後の自然な昼休憩。休憩後の再開（#7: DS 4.3）に問題はなかったが、午後の開始時刻が遅くなった結果、夜間セッション後に翌朝ナレッジまとめ（#13）が必要になった",
+          "#9のnotesに「メッセージのタイプごと、エラーメッセージなどの詳細なカスタムはできていないが一旦は完了とする」と記録",
+          "基本機能（全コントローラーへの適用）の完了を優先し、スタイルの詳細カスタムを先送り。週次目標の進行速度を優先した判断として妥当だが、積み残しとして認識している"
+        ],
+        "insight": [
+          "#10での実装後、Tailwind CSSの学習を「プロジェクト必須ではないが投資」と位置づけ、来週までの期限を設定",
+          "AIを活用した開発スピード向上には基礎CSS理解が前提になるという気づきから。単発スキルではなく「AIとの協働基盤」として捉えた戦略的な判断",
+          "次回プロジェクト・ミニアプリでカスタムCSSを使えるよう、実装ごとにTailwindの記述とCSSを紐づけてメモを残す方針を決定",
+          "「時間がいくらあっても足りない」という気づきから、AIとのバランスを取りながら再利用可能な形で知識を蓄積する戦略へ。テンプレート化することでAIへの指示精度も上がる"
+        ],
+        "strategy_for_next_day": [
+          "TailwindCSSを全体に共有させる方法について午前中学習。午後からは1週間の振り返りを行う"
+        ]
+      },
+      "learning_record": {
+        "what_i_did": [
+          "3/20の持ち越しだったプロフィール実装の言語化を午前イチのセッション（#1: 116m）で完了し、そのまま実装へ。既存カリキュラムのコードを参照しつつ、ファイル作成やアクション追加はAIに指示することで38m（#3）で表示機能を完了。続く13m（#4）でプロフィール編集機能も脳死コピペ戦略で仕上げた。午前後半（#5: 29m）はUIUXの改善点と修正対象ファイルをリストアップ。",
+          "昼食・散歩（108m）を挟んで午後はフラッシュメッセージの実装へ。ランテくんでCSSクラス設定方法を確認しながら実装し、#9（31m）でUsersController・UserSessionsController・TipsController・ProfilesControllerの4コントローラー全てのフラッシュメッセージを完了。夕方（#10: 87m）はTailwind CSSを使いながらヘッダーレイアウトの修正に取り組み、バニラCSSとの対応をメモしながら実装を進めた。"
+        ],
+        "what_i_struggled_with": [
+          "フラッシュメッセージのタイプ別・エラーメッセージの詳細カスタマイズは未完了（基本機能優先で先送り）",
+          "ヘッダーUI修正時、最初DaisyUIを試みたがイメージと合わずTailwind CSSに切り替えた"
+        ],
+        "why_it_happened": [
+          "フラッシュメッセージの詳細カスタムは学習コストが高く、まず全コントローラーへの基本適用を完了させることを優先した",
+          "DaisyUIはコンポーネントの制約が強くイメージ通りのUIが作りにくかった。Tailwind CSSに切り替えることで自由度が上がり実装を進められた"
+        ],
+        "what_i_learned": [
+          "redirect_toは新しいHTTPリクエストを発行し、renderは同一リクエスト内で別のviewを返す（リクエスト回数の違い）",
+          "flashメソッドはコントローラーとビューのセットで実装：`flash: {キー名: \"メッセージ\"}` → ビューで `<%= flash[:キー名] %>`",
+          "Tailwind CSSの背景色は `bg-{色}-{濃さ}`、テキスト色は `text-{色}-{濃さ}` の形式で指定",
+          "Tailwind CSSは想定より学習コストが低く、チートシートと公式ドキュメントが充実している"
+        ]
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-21T07:58:00+09:00",
+          "end_time": "2026-03-21T09:54:00+09:00",
+          "duration_min": 116,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.7,
+          "notes": "**やった**: プロフィール実装の言語化と実装スタート\n**詰まった/気づいた**: 前日に急なMTGが入り、外出予定がありプロフィール実装の言語化は完了できず。事前に昨日と今日のタスクは明確だったのでそのまま学習をスタート"
+        },
+        {
+          "start_time": "2026-03-21T07:59:00+09:00",
+          "end_time": "2026-03-21T08:33:00+09:00",
+          "duration_min": 34,
+          "category": "Other",
+          "original_type": "knowledge_organization",
+          "deep_score": 4.3,
+          "notes": "**やった**: 前日の学習振り返りとまとめ、学習ログ作成\n**詰まった/気づいた**: 前日の書き出したラフな内容を整理。論理構成や意味の伝わりやすさを再度チェック。Technical Learningsのタイトルだけ書き出しておくことでテストになってよき"
+        },
+        {
+          "start_time": "2026-03-21T09:54:00+09:00",
+          "end_time": "2026-03-21T10:12:00+09:00",
+          "duration_min": 18,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: コーヒー豆を弾いてコーヒーを淹れる"
+        },
+        {
+          "start_time": "2026-03-21T10:12:00+09:00",
+          "end_time": "2026-03-21T10:50:00+09:00",
+          "duration_min": 38,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.7,
+          "notes": "**やった**: プロフィール実装｜プロフィール表示機能作成完了\n**詰まった/気づいた**: 表示機能作成のファイル作成やルーティングなどの単縦なコードはaiで指示をして作成。プロフィール表示は完了したので次は編集機能へ"
+        },
+        {
+          "start_time": "2026-03-21T10:51:00+09:00",
+          "end_time": "2026-03-21T11:04:00+09:00",
+          "duration_min": 13,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.3,
+          "notes": "**やった**: プロフィール実装｜プロフィール編集機能\n**詰まった/気づいた**: 同様に既存プロジェクトをそのままコピペ。理解しているので脳死戦略"
+        },
+        {
+          "start_time": "2026-03-21T11:05:00+09:00",
+          "end_time": "2026-03-21T11:34:00+09:00",
+          "duration_min": 29,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.0,
+          "notes": "**やった**: UIUXの改善点と修正対象ファイルのリストアップ"
+        },
+        {
+          "start_time": "2026-03-21T11:35:00+09:00",
+          "end_time": "2026-03-21T13:23:00+09:00",
+          "duration_min": 108,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: 昼食、散歩"
+        },
+        {
+          "start_time": "2026-03-21T13:24:00+09:00",
+          "end_time": "2026-03-21T15:17:00+09:00",
+          "duration_min": 113,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.3,
+          "notes": "**やった**: フラッシュメッセージ実装\n**詰まった/気づいた**: 学習をしながら実装。メッセージのCSSクラス設定方法について実例をランテくんで質問。バニラCSSとtailwindcssを意識しながらflashメッセのスタイル作成"
+        },
+        {
+          "start_time": "2026-03-21T15:19:00+09:00",
+          "end_time": "2026-03-21T15:43:00+09:00",
+          "duration_min": 24,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": ""
+        },
+        {
+          "start_time": "2026-03-21T15:43:00+09:00",
+          "end_time": "2026-03-21T16:14:00+09:00",
+          "duration_min": 31,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 3.7,
+          "notes": "**やった**: UsersController, UserSessionsController, TipsController, ProfilesControllerの成功/失敗時のフラッシュメッセージ作成完了\n**詰まった/気づいた**: メッセージのタイプごと、エラーメッセージなどの詳細なカスタムはできていないが一旦は完了とする。次はヘッダーなどのUIの調整に入っていく"
+        },
+        {
+          "start_time": "2026-03-21T16:16:00+09:00",
+          "end_time": "2026-03-21T17:43:00+09:00",
+          "duration_min": 87,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.0,
+          "notes": "**やった**: ヘッダーレイアウト修正｜Tailwindcss\n**詰まった/気づいた**: Tailwindcssを使いながらバニラCSS時の実装をメモ"
+        },
+        {
+          "start_time": "2026-03-21T17:43:00+09:00",
+          "end_time": "2026-03-21T18:16:00+09:00",
+          "duration_min": 33,
+          "category": "Other",
+          "original_type": "Exercise",
+          "deep_score": 2.3,
+          "notes": ""
+        },
+        {
+          "start_time": "2026-03-21T18:52:00+09:00",
+          "end_time": "2026-03-21T19:23:00+09:00",
+          "duration_min": 31,
+          "category": "Other",
+          "original_type": "daily_review",
+          "deep_score": 4.0,
+          "notes": "**やった**: 学習内容まとめ｜定性面振り返り"
+        }
+      ],
+      "daily_completed": true
+    },
+    {
+      "date": "2026-03-22",
+      "day_mode": "Off",
+      "stats": {
+        "budget_min": 0,
+        "total_min": 0,
+        "pure_study_min": 0,
+        "rest_min": 0,
+        "exercise_min": 0,
+        "avg_deep_score": 0.0
+      },
+      "plan": {
+        "top1": "",
+        "done_condition": "",
+        "if_interrupted": ""
+      },
+      "feedback": {
+        "top1_done_condition": {
+          "quantitative": [],
+          "qualitative": []
+        },
+        "time_allocation": {
+          "quantitative": [],
+          "qualitative": []
+        }
+      },
+      "reflection": {
+        "worked": [],
+        "slipped": [],
+        "insight": [],
+        "strategy_for_next_day": []
+      },
+      "learning_record": {
+        "what_i_did": [],
+        "what_i_struggled_with": [],
+        "why_it_happened": [],
+        "what_i_learned": []
+      },
+      "sessions": [
+        {
+          "start_time": "2026-03-22T07:43:00+09:00",
+          "end_time": "2026-03-22T07:58:00+09:00",
+          "duration_min": 15,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 3.7,
+          "notes": "**やった**: イベントSNSにて告知"
+        },
+        {
+          "start_time": "2026-03-22T07:59:00+09:00",
+          "end_time": "2026-03-22T08:33:00+09:00",
+          "duration_min": 34,
+          "category": "Other",
+          "original_type": "knowledge_organization",
+          "deep_score": 4.3,
+          "notes": "**やった**: 前日の学習振り返りとまとめ、学習ログ作成\n**詰まった/気づいた**: 前日の書き出したラフな内容を整理。論理構成や意味の伝わりやすさを再度チェック。Technical Learningsのタイトルだけ書き出しておくことでテストになってよき"
+        },
+        {
+          "start_time": "2026-03-22T08:37:00+09:00",
+          "end_time": "2026-03-22T08:58:00+09:00",
+          "duration_min": 21,
+          "category": "Other",
+          "original_type": "Other",
+          "deep_score": 3.7,
+          "notes": "**やった**: 学習ログ整形とマタモへシェア"
+        },
+        {
+          "start_time": "2026-03-22T08:59:00+09:00",
+          "end_time": "2026-03-22T09:44:00+09:00",
+          "duration_min": 45,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: 散歩\n**詰まった/気づいた**: シャワー"
+        },
+        {
+          "start_time": "2026-03-22T09:44:00+09:00",
+          "end_time": "2026-03-22T12:23:00+09:00",
+          "duration_min": 159,
+          "category": "Other",
+          "original_type": "mini_app_dev",
+          "deep_score": 4.3,
+          "notes": "**やった**: ログインフォームUI修正、Tailwindcssのテンプレート化方法リサーチ｜\n**詰まった/気づいた**: テンプレート化をする方法を発見したので今回は完了とすリウ。午後からは1週間の振り返りフローを15時までに完了。余裕があればTailwindやデプロイの学習をすることに"
+        },
+        {
+          "start_time": "2026-03-22T12:24:00+09:00",
+          "end_time": "2026-03-22T13:13:00+09:00",
+          "duration_min": 49,
+          "category": "Other",
+          "original_type": "Rest",
+          "deep_score": 2.3,
+          "notes": "**やった**: 昼食\n**詰まった/気づいた**: 1週間の振り返りを行って自由タイムに早く突入したいので昼食後タスク即スタートへ"
+        },
+        {
+          "start_time": "2026-03-22T13:14:00+09:00",
+          "end_time": null,
+          "duration_min": 0,
+          "category": "Other",
+          "original_type": "-",
+          "deep_score": 2.0,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}

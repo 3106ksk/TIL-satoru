@@ -61,13 +61,17 @@
 ## 🛠️ データ処理・正規化・整理
 
 ### `process_sessions_db_export`
-**📝 処理内容**: NotionからエクスポートしたSessions DBのCSVを処理し、指定した日付のデータをMarkdownに変換、リネームして整理します。
+**📝 処理内容**: `daily_sessions_record/` 内の日別セッションファイル（`sessions_YYYY-MM-DD.md`）を指定日付範囲で結合し、`Sessions/Sessions_DB_YYYY-MM-DD_to_YYYY-MM-DD.md` を生成します。`merge_daily_sessions.py` が時刻形式変換・Notes再構造化・WeekKey算出を自動処理します。
+
 **🗣️ トリガー（呼び出し言葉）**:
-- 「Sessions DBのCSVを処理して」
+- 「日別セッションを結合して」
+- 「daily_sessions_recordをまとめて」
 - 「SessionログをMarkdownに変換して」
+- 「Sessions DBを生成して」
 
 ### `normalize_learning_log`
-**📝 処理内容**: まず `process_sessions_db_export` を実行して最新のCSVをMarkdownに変換し、その後 Daily Review MD と結合して、週次分析などに利用するための正規化されたJSONデータを自動生成します。（2つのスキルを連続実行します）
+**📝 処理内容**: `process_sessions_db_export` で生成した Sessions_DB MD と `daily/` の Daily Review MD を結合して、週次分析用の正規化JSONデータを自動生成します。
+
 **🗣️ トリガー（呼び出し言葉）**:
 - 「1週間のログを正規化して」
 - 「学習ログを正規化して」
